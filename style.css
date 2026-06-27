@@ -1,0 +1,206 @@
+/* ==========================================================================
+   1. BASE STYLES & CORE VARIABLES
+   ========================================================================== */
+:root {
+    --bg-primary: #0d0d0d;
+    --bg-secondary: #161616;
+    --bg-card: #1c1c1c;
+    --accent-red: #fffff;
+    --text-main: #d4d4d4;
+    --text-muted: #888888;
+    --border-color: #2a2a2a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   2. NAVIGATION HEADER
+   ========================================================================== */
+header {
+    background-color: var(--bg-secondary);
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo {
+    color: var(--accent-red);
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--accent-red);
+}
+
+/* ==========================================================================
+   3. HERO BANNER
+   ========================================================================== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), 
+                url('https://cdn.pfps.gg/banners/6844-scp.png') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 3px solid var(--accent-red);
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    color: var(--accent-red);
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: var(--text-muted);
+}
+
+.btn {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--accent-red);
+    border: 2px solid var(--accent-red);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-red);
+    color: var(--bg-primary);
+    box-shadow: 0 0 15px rgba(255, 51, 51, 0.4);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. CONTENT LAYOUT & CARDS
+   ========================================================================== */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent-red);
+}
+
+.card h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.card ul {
+    list-style-type: none;
+}
+
+.card ul li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Custom terminal block bullet points */
+.card ul li::before {
+    content: "■";
+    color: var(--accent-red);
+    position: absolute;
+    left: 0;
+    font-size: 0.8rem;
+    top: 2px;
+}
+
+/* ==========================================================================
+   5. WIDGET / JOIN SECTION
+   ========================================================================== */
+.join-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    margin-top: 40px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-left: 4px solid var(--accent-red);
+}
+
+.join-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.join-text h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.widget-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 320px;
+}
+
+.widget-container iframe {
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   6. FOOTER
+   ========================================================================== */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: var(--bg-secondary);
+    border-top: 2px solid var(--border-color);
+    font-size: 0.8rem;
+    color: #555555;
+    margin-top: 60px;
+}
